@@ -18,8 +18,8 @@ source .venv/bin/activate
 
 To activate in windows:
 ````bash
-env/Scripts/activate.bat //In CMD
-env/Scripts/Activate.ps1 //In Powershel
+.venv/Scripts/activate.bat //In CMD
+.venv/Scripts/Activate.ps1 //In Powershel
 ````
 
 Install necessary dependencies
