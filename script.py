@@ -37,8 +37,8 @@ def scan_file(file):
     ruta_procesar_archivo = 754
 
     # Ruta base con nombre del archivo al final
-    base_dir_escanear = f"C:\\Users\\Asus\\Downloads\\EMPRESAS DE LA MUESTRA\\{file}.xlsx"
-    base_dir_guardar = f"C:\\Users\\Asus\\Downloads\\EMPRESAS DE LA MUESTRA\\DATA VARIABLES\\{file}.xlsx"
+    base_dir_escanear = f"COLOCAR-PATH\\EMPRESAS DE LA MUESTRA\\{file}.xlsx"
+    base_dir_guardar = f"COLOCAR-PATH\\EMPRESAS DE LA MUESTRA\\DATA VARIABLES\\{file}.xlsx"
 
     # Combinar ruta base y nombre de archivo
     full_path_escanear = base_dir_escanear.replace("\\", "\\\\")
@@ -85,7 +85,7 @@ def main():
     files_to_scan = df['NOMBRE'].tolist()
 
     for file in files_to_scan:
-        full_path = f"C:\\Users\\Asus\\Downloads\\EMPRESAS DE LA MUESTRA\\{file}.xlsx"
+        full_path = f"COLOCAR-PATH\\EMPRESAS DE LA MUESTRA\\{file}.xlsx"
         if file not in scanned_files:
             if os.path.exists(full_path):               
                 if scan_file(file):

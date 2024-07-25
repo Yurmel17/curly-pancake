@@ -8,7 +8,7 @@ pip install virtualenv
 
 Create a virtual environment inside a project
 ````bash
-python3 -m venv .venv
+python -m venv .venv
 ````
 
 Activate the virtual environment
