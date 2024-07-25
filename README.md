@@ -13,17 +13,16 @@ python3 -m venv .venv
 
 Activate the virtual environment
 ````bash
-source .venv/bin/activate
-````
-
-To activate in windows:
-````bash
-.venv/Scripts/activate.bat //In CMD
-.venv/Scripts/Activate.ps1 //In Powershel
+.venv/Scripts/Activate.ps1
 ````
 
 Install necessary dependencies
 ````bash
 pip install -r requirements.txt
+````
+
+Run the script
+````bash
+python script.py
 ````
 

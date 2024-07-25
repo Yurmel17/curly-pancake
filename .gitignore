@@ -1,1 +1,3 @@
 .venv/
+temp_script.R
+scan_log.log

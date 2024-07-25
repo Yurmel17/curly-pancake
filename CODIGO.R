@@ -1,14 +1,14 @@
 # Cargar paquetes necesarios 
 
-install.packages("readxl") 
+install.packages("readxl", repos='https://cloud.r-project.org') 
 
-install.packages("writexl") 
+install.packages("writexl", repos='https://cloud.r-project.org') 
 
-install.packages("tidyverse")  # Este incluye tidyr y dplyr 
+install.packages("tidyverse", repos='https://cloud.r-project.org')  # Este incluye tidyr y dplyr 
 
-install.packages("stringr") 
+install.packages("stringr", repos='https://cloud.r-project.org') 
 
-install.packages("openxlsx") 
+install.packages("openxlsx", repos='https://cloud.r-project.org') 
 
 
 
@@ -26,10 +26,10 @@ library(openxlsx)
 
 
 # Especifica la ruta del archivo 
-file.choose() 
+# file.choose() 
 
 # Especifica la ruta del archivo 
-ruta_excel <-"D:\\Descargas\\EMPRESAS DE LA MUESTRA\\ÚSTAV ANALYTICKÉ CHEMIE AV ČR V V I.xlsx"
+ruta_excel <-"C:\\Users\\Asus\\Downloads\\EMPRESAS DE LA MUESTRA\\KNU INDUSTRY COOPERATION FOUNDATION.xlsx"
 
 # Leer el archivo Excel 
 data <- read_excel(ruta_excel) 
@@ -350,7 +350,7 @@ codigos_especificos <- c(
   
   "G01N33/68", "G01N33/74", "G01N33/76", "G01N33/78", "G01N33/88", "G01N33/92"   
   
- 
+  
 ) 
 
 
@@ -596,7 +596,7 @@ writeData(wb, "Matriz_Rango_3", matriz_rango_3)
 
 # Guardar el archivo Excel 
 
-saveWorkbook(wb, "D:\\Descargas\\EMPRESAS DE LA MUESTRA\\DATA VARIABLES\\ÚSTAV ANALYTICKÉ CHEMIE AV ČR V V I.xlsx", overwrite = TRUE) 
+saveWorkbook(wb, "C:\\Users\\Asus\\Downloads\\EMPRESAS DE LA MUESTRA\\DATA VARIABLES\\KNU INDUSTRY COOPERATION FOUNDATION.xlsx", overwrite = TRUE)
 
 
 
@@ -604,17 +604,17 @@ saveWorkbook(wb, "D:\\Descargas\\EMPRESAS DE LA MUESTRA\\DATA VARIABLES\\ÚSTAV 
 
 procesar_y_almacenar_excel <- function(ruta_excel, ruta_almacenamiento) { 
   
-# Leer el archivo Excel generado 
+  # Leer el archivo Excel generado 
   
-data_matriz_1 <- read_excel(ruta_excel, sheet = "Matriz_Rango_1") 
+  data_matriz_1 <- read_excel(ruta_excel, sheet = "Matriz_Rango_1") 
   
-data_matriz_2 <- read_excel(ruta_excel, sheet = "Matriz_Rango_2") 
+  data_matriz_2 <- read_excel(ruta_excel, sheet = "Matriz_Rango_2") 
   
-data_matriz_3 <- read_excel(ruta_excel, sheet = "Matriz_Rango_3") 
+  data_matriz_3 <- read_excel(ruta_excel, sheet = "Matriz_Rango_3") 
   
   
   
-# Verificar que data_matriz son data frames 
+  # Verificar que data_matriz son data frames 
   
   if (!is.data.frame(data_matriz_1) | !is.data.frame(data_matriz_2) | !is.data.frame(data_matriz_3)) { 
     
@@ -746,13 +746,13 @@ ruta <- getwd()
 
 # Ruta del archivo Excel de almacenamiento 
 
-ruta_almacenamiento <- "D:\\Descargas\\EMPRESAS DE LA MUESTRA\\DATA VARIABLES\\ALMACENAMIENTO_DT.xlsx"
+ruta_almacenamiento <- "C:\\Users\\Asus\\Downloads\\EMPRESAS DE LA MUESTRA\\DATA VARIABLES\\ALMACENAMIENTO_DT.xlsx"
 
 
 
 # Procesar y almacenar la información del archivo generado 
 
-procesar_y_almacenar_excel("D:\\Descargas\\EMPRESAS DE LA MUESTRA\\DATA VARIABLES\\ÚSTAV ANALYTICKÉ CHEMIE AV ČR V V I.xlsx", ruta_almacenamiento) 
+procesar_y_almacenar_excel("C:\\Users\\Asus\\Downloads\\EMPRESAS DE LA MUESTRA\\DATA VARIABLES\\KNU INDUSTRY COOPERATION FOUNDATION.xlsx", ruta_almacenamiento) 
 
 
 # Obtener el directorio de trabajo actual 
